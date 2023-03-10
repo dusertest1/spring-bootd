@@ -63,8 +63,6 @@ public class ContactController {
 
     @Autowired
     private ContactService contactService;
-    
-    InetAddress ip;
 
     @Value("${msg.title}")
     private String title;
