@@ -63,9 +63,11 @@ public class ContactController {
 
     @Autowired
     private ContactService contactService;
+    
+    InetAddress ip;
 
     @Value("${msg.title}")
-    private String title;
+    private String title = ip.getHostName();
 
     @GetMapping(value = {"/", "/index"})
     public String index(Model model) {
