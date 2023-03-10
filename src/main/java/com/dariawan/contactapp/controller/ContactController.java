@@ -53,7 +53,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import java.net.InetAddress;
 
 @Controller
 public class ContactController {
@@ -68,7 +67,7 @@ public class ContactController {
     InetAddress ip;
 
     @Value("${msg.title}")
-    private String title = ip.getHostName();
+    private String title;
 
     @GetMapping(value = {"/", "/index"})
     public String index(Model model) {
