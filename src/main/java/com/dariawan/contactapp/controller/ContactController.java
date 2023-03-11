@@ -38,6 +38,9 @@
  */
 package com.dariawan.contactapp.controller;
 
+import java.net.InetAddress;  
+import java.net.UnknownHostException;
+
 import com.dariawan.contactapp.domain.Contact;
 import com.dariawan.contactapp.exception.ResourceNotFoundException;
 import com.dariawan.contactapp.service.ContactService;
@@ -69,6 +72,10 @@ public class ContactController {
 
     @GetMapping(value = {"/", "/index"})
     public String index(Model model) {
+    	try {  
+    	    InetAddress id = InetAddress.getLocalHost();  
+    	    model.addAttribute("myHostName", id.getHostName()); 
+    	} catch (UnknownHostException e) {System.out.println("erreur de récupération du hostname");}    
         model.addAttribute("title", title);
         return "index";
     }
