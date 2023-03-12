@@ -1,3 +1,2 @@
 [masters]
-192.168.56.2
-ansible_user=trainee
+192.168.56.2 ansible_user=trainee
