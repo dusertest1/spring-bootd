@@ -9,24 +9,24 @@
     # ---------------------------------------------Tomcat-----------------------------------------------------------
     # Vérifier si le le deployement existe déjà sur le namespace pre-prod
     - name: Vérifier l'existence du deployement Tomcat
-      shell: sudo kubectl get deployment tomcat-deployment
+      shell: kubectl get deployment tomcat-deployment
       ignore_errors: true
       register: pod_check_result
 
     # Créer le deployement Tomcat sur le namespace pre-prod si il n'existe pas 
     - name: Créer le deployement Tomcat
-      shell: sudo kubectl create -f /root/kubernetes/service_applicatif/tomcat-deployment.yaml
+      shell: kubectl create -f /root/kubernetes/service_applicatif/tomcat-deployment.yaml
       when: pod_check_result.rc != 0
 
     # Services Tomcat
 
     # Vérifier si le services pour posgres existe déjà sur le namespace pre-prod
     - name: Vérifier l'existence du service Tomcat
-      shell: sudo kubectl get deployment tomcat-service
+      shell: kubectl get deployment tomcat-service
       ignore_errors: true
       register: pod_check_result
 
     # Créer le service Tomcat sur le namespace pre-prod 
     - name: Créer le service Tomcat
-      shell: sudo kubectl create -f /root/kubernetes/service_applicatif/tomcat-service.yaml
+      shell: kubectl create -f /root/kubernetes/service_applicatif/tomcat-service.yaml
       when: pod_check_result.rc != 0
