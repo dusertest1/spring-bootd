@@ -1,2 +1,2 @@
 [masters]
-192.168.56.2 ansible_user=trainee ansible_python_interpreter=/usr/bin/python3.5
+192.168.56.2 ansible_python_interpreter=/usr/bin/python3.5
