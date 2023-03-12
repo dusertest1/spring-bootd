@@ -23,7 +23,7 @@
 
     # Vérifier si le services pour posgres existe déjà sur le namespace pre-prod
     - name: Vérifier l'existence du service Tomcat
-      shell: export KUBECONFIG=/home/trainee/admin.conf && kubectl get deployment tomcat-service
+      shell: export KUBECONFIG=/home/trainee/admin.conf && kubectl get service tomcat-service
       ignore_errors: true
       register: pod_check_result
 
