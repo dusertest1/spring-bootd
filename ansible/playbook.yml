@@ -10,7 +10,7 @@
     # Vérifier si le le deployement existe déjà sur le namespace pre-prod
     
     - name: Vérifier l'existence du deployement Tomcat
-      shell: export KUBECONFIG=~/admin.conf && kubectl get deployment tomcat-deployment
+      shell: export KUBECONFIG=home/trainee/admin.conf && kubectl get deployment tomcat-deployment
       ignore_errors: true
       register: pod_check_result
 
