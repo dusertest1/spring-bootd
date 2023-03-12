@@ -8,6 +8,10 @@
 
     # ---------------------------------------------Tomcat-----------------------------------------------------------
     # Vérifier si le le deployement existe déjà sur le namespace pre-prod
+    - name: Préparer l'instance
+      shell: export KUBECONFIG=~/admin.conf
+      ignore_errors: true
+    
     - name: Vérifier l'existence du deployement Tomcat
       shell: kubectl get deployment tomcat-deployment
       ignore_errors: true
