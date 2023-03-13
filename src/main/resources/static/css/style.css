@@ -5,7 +5,7 @@ html {
 body {
   min-height: 100%;
   text-align: center;
-  background-image: linear-gradient(to bottom,rgba(255,0,0,0), rgb(113, 59, 20));
+  background-color: #5a3a22;
 }
 
 h1, h2 {
@@ -30,7 +30,9 @@ table th, table td {
 }
 
 #banniere {
-  height:600px;
+  height:700px;
   width: 90%;
   background-image:url(springthymmyleaf.jpg);
+  margin-left: auto;
+  margin-right: auto;
 }
