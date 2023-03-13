@@ -1,13 +1,14 @@
-
+*{
+  font-family: sans-serif;
+}
 html {
   height: 100%;
 }
 body {
   min-height: 100%;
   text-align: center;
-  background-color: #5a3a22;
+  background-color: #68574a;
 }
-
 h1, h2 {
     color:#ff4f57;
 }
@@ -35,6 +36,7 @@ table th, table td {
   background-image:url(springthymmyleaf.jpg);
   margin-left: auto;
   margin-right: auto;
+  border-radius: 30px
 }
 table {
   margin-left: auto;
